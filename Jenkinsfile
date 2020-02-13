@@ -17,7 +17,7 @@ pipeline {
 
     stage('Results') {
       steps {
-        realtimeJUnit(testResults: '**/target/surefire-reports/TEST-*.xml')
+        junit '**/target/surefire-reports/TEST-*.xml')
         archiveArtifacts 'target/*.jar'
       }
     }
